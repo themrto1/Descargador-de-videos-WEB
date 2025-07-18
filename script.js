@@ -15,7 +15,7 @@ boton.addEventListener('click', async () => {
     urlVideo = urlVideo.slice(0, pos);
   }
 
-  const res = await fetch('http://127.0.0.1:8000/miniatura', {
+  const res = await fetch('https://tuapp.railway.app/miniatura', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -50,9 +50,9 @@ descargar.addEventListener('click', async () => {
   }
 
   if (tipo === "video") {
-    window.location.href = `http://localhost:8000/descargarvideo?url=${encodeURIComponent(url)}`;
+    window.location.href = `https://tuapp.railway.app/descargarvideo?url=${encodeURIComponent(url)}`;
   } else {
-    window.location.href = `http://localhost:8000/descargaraudio?url=${encodeURIComponent(url)}`;
+    window.location.href = `https://tuapp.railway.app/descargaraudio?url=${encodeURIComponent(url)}`;
   }
 });
 
